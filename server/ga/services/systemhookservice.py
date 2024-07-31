@@ -12,7 +12,11 @@ from . import gitlabservice
 
 def dispatch(event_data):
     mod = sys.modules[__name__]
-    func = getattr(mod, event_data['event_name'], None)
+    
+    try:
+        func = getattr(mod, event_data['event_name'], None)
+    except:
+        func = getattr(mod, event_data['event_type'], None)
 
     if func is not None:
         try:

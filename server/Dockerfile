@@ -1,7 +1,7 @@
 FROM python:3.6.5-slim
 MAINTAINER oylbin "oylbin@gmail.com"
 # ARG is used in build time
-ARG INDEX_URL=https://pypi.python.org/simple
+ARG INDEX_URL=https://mirrors.aliyun.com/pypi/simple/
 # ENV is used in runtime
 ENV FLASK_APP=ga
 ENV FLASK_DEBUG=1
